@@ -14,7 +14,13 @@
   Then alert your name using dot notation.
 */
 
-//Code here
+const me = {
+  name:'christine',
+  age: 34
+};
+alert(me.name);
+
+console.log(me.age);
 
 /// ////////////// PROBLEM 2 ///////////////////
 
@@ -23,7 +29,14 @@
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
-//Code here
+const favoriteThings = {
+  band:'Joy Divsion',
+  food:'fries',
+  person:'gavin',
+  book:'Revolution from Within',
+  movie:'They Live',
+  holiday: 'Halloween'
+};
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
