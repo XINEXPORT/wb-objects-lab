@@ -139,8 +139,19 @@ function double(obj){
 */
 
 function showValues(obj) {
-  //Code Here
+  let str = '';
+  for(let key in obj){
+    str += obj[key] +'';
+  }
+  return str;
 }
+
+const con = {
+  str:'abd',
+  str1: 'tre'
+};
+
+showValues(con)
 
 /// ////////////// PROBLEM 8 ///////////////////
 
@@ -151,8 +162,14 @@ function showValues(obj) {
 */
 
 function makeCard(cardNumber, expirationDate, securityCode){
-
-}
+  let newCard = {};
+    newCard.cardNumber = cardNumber;
+    newCard.expirationDate = expirationDate;
+    newCard.securityCode = securityCode;
+  return newCard
+  }
+  
+  console.log(makeCard(132,6052, 989));
 
 /// ////////////// PROBLEM 9 ///////////////////
 
@@ -378,7 +395,15 @@ const myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner(obj){
+  let {accidents}=myCar;
+  for (let accident of accidents){
+    if (accident.atFaultForAccident === true){   
+    accident.atFaultForAccident = false; 
+    }
+  }                 
+    return obj
+  }
 
 /// ////////////// PROBLEM 18 ///////////////////
 
