@@ -84,7 +84,11 @@ let shoppingCart = {};
   It should add a new key-value pair to the cart with the item and quantity.
 */
 
-//Code Here
+function addToCart (item, quantity){
+  shoppingCart[item]=quantity
+}
+addToCart ('test', 1)
+console.log(shoppingCart);
 
 /// ////////////// PROBLEM 5 ///////////////////
 
@@ -94,7 +98,14 @@ let shoppingCart = {};
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(obj) {
+  for (const gten in obj){
+    if (obj[gten] > 10){
+      obj[gten]=0
+    }
+    return gten;
+  }
+}
 
 /// ////////////// PROBLEM 6 ///////////////////
 
@@ -169,14 +180,16 @@ const carDetails = {
   model: 'tacoma',
   year: 1994,
 };
-// Do not edit the code above.
+
+const {color, make, model, year} = carDetails;
+  console.log(color, make, model, year);
 
 /*
   Use object destructuring to save the property values from the object carDetails into new variables.
 */
 
-//Code Here
-
+const {color0, make1, model2, year3} = carDetails;
+  console.log(color0, make1, model2, year3);
 /// ////////////// PROBLEM 12 ///////////////////
 
 /*
