@@ -98,14 +98,23 @@ console.log(shoppingCart);
   Return the updated object.
 */
 
+let test={
+  a:1,
+  b:12,
+  c:8
+}
+
 function greaterThan10(obj) {
-  for (const gten in obj){
-    if (obj[gten] > 10){
+  for (let gten in obj){ 
+    if (obj[gten] > 10){ 
       obj[gten]=0
     }
-    return gten;
   }
-}
+  return obj;
+  }
+
+greaterThan10(test)
+console.log(test);
 
 /// ////////////// PROBLEM 6 ///////////////////
 
@@ -115,7 +124,13 @@ function greaterThan10(obj) {
   Return the updated object.
 */
 
-//Code Here
+
+function double(obj){
+  for(let key in obj){
+    obj[key]=obj[key]*2;
+  }
+  return obj;
+}
 
 /// ////////////// PROBLEM 7 ///////////////////
 
@@ -187,9 +202,6 @@ const {color, make, model, year} = carDetails;
 /*
   Use object destructuring to save the property values from the object carDetails into new variables.
 */
-
-const {color0, make1, model2, year3} = carDetails;
-  console.log(color0, make1, model2, year3);
 /// ////////////// PROBLEM 12 ///////////////////
 
 /*
@@ -199,7 +211,7 @@ const {color0, make1, model2, year3} = carDetails;
 */
 
 function greeting(obj) {
-  //Code Here
+  
 
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
