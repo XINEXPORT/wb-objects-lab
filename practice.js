@@ -348,16 +348,14 @@ const employees = [
 */
 
 function employeeUpdater() {
-  for (let index in employees) {
-    const employee = employees[index];
-    if (employee.firstName === 'Theo') {
-      delete employees[index]; 
-    } else if (employee.firstName === 'Lorie') {
-      employee.department = 'HR'; 
+  for (let item of employees) {
+    if (item.firstName === 'Theo') {
+      employees.splice(employees.indexOf(item), 1)
+    } else if (item.firstName === 'Lorie') {
+      item.department = 'HR'; 
     }
   }
-
-  return employees.filter(Boolean);
+  return employees;
 }
 
 /// ////////////// PROBLEM 16 ///////////////////
