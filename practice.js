@@ -264,6 +264,7 @@ const {color, make, model, year} = carDetails;
 */
 
 function greeting(obj) {
+  const {firstName, lastName, title} = obj
   
 
   // Do not edit the code below.
@@ -281,7 +282,10 @@ function greeting(obj) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj){
+  const {texas, utah, california, arizona} = obj;
+  return texas + utah + california + arizona;
+}
 
 /// ////////////// PROBLEM 14 ///////////////////
 
@@ -293,7 +297,11 @@ function greeting(obj) {
   Return false otherwise.
 */
 
-//Code Here
+function usCanadaBorder(coords){
+  const [latitude, longitude] = coords;
+    return latitude ===49 && longitude >= -123 && longitude <=-95;
+    }
+
 
 /// ////////////// PROBLEM 15 ///////////////////
 
@@ -339,7 +347,18 @@ const employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater() {
+  for (let index in employees) {
+    const employee = employees[index];
+    if (employee.firstName === 'Theo') {
+      delete employees[index]; 
+    } else if (employee.firstName === 'Lorie') {
+      employee.department = 'HR'; 
+    }
+  }
+
+  return employees.filter(Boolean);
+}
 
 /// ////////////// PROBLEM 16 ///////////////////
 
@@ -366,8 +385,8 @@ const cat = {
 */
 
 //Code Here
-let grumpyActivity;
-let fluffy2ndFriend;
+let grumpyActivity = cat.catFriends[0].activities[1];
+let fluffy2ndFriend = cat.catFriends[1].name;
 
 /// ////////////// PROBLEM 17 ///////////////////
 
@@ -431,7 +450,9 @@ function recordCleaner(obj){
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers({first, second, third}){
+  return Math.min(first, second, third);
+}
 
 /// ////////////// PROBLEM 19 ///////////////////
 
@@ -441,11 +462,15 @@ function recordCleaner(obj){
   Find the longest array and return that array.
 */
 
-function numberGroups(obj){
-let {a, b, c} = obj;}
+function numberGroups({a,b,c}){
+  if (a.length>b.length){
+    return a.length > c.length ? a:c;
+  }
+  return b.length>c.length ? b:c;
+}
 
-const object1 = {
-  a: [1,2,3],
-  b: [4,5,6,7],
-  c: [8,9,10,11]
-};
+// const object1 = {
+//   a: [1,2,3],
+//   b: [4,5,6,7],
+//   c: [8,9,10,11]
+// };
