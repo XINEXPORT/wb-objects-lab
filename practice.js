@@ -150,8 +150,18 @@ const con = {
   str:'abd',
   str1: 'tre'
 };
-
 showValues(con)
+
+
+// function showValues(str, str1){
+//   let newName = "";
+//       newName.str = str;
+//       newName.str1 = str1;
+//     return newName;
+//     }
+
+//     console.log(showValues('aa','bb'));
+
 
 /// ////////////// PROBLEM 8 ///////////////////
 
@@ -431,4 +441,11 @@ function recordCleaner(obj){
   Find the longest array and return that array.
 */
 
-//Code Here
+function numberGroups(obj){
+let {a, b, c} = obj;}
+
+const object1 = {
+  a: [1,2,3],
+  b: [4,5,6,7],
+  c: [8,9,10,11]
+};
